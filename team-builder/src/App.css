@@ -1,3 +1,10 @@
+.App-container {
+  width: 50%;
+  margin: 5% auto;
+  border: 1px solid blue;
+  padding: 5%;
+}
+
 .App {
   text-align: center;
 }
