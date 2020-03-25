@@ -44,7 +44,17 @@
   padding: 2%;
 }
 /* Form component styles */
-form {
-  margin-top: 5%;
+.form-container {
+  max-width: 35%;
+  margin: 4% auto;
+  border: 1px solid;
+  padding: 2%;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container form input {
+  margin: 4% 0;
 }
 
