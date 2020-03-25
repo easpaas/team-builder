@@ -37,20 +37,12 @@
   }
 }
 
-/* MembersList component styles */
-.container {
+.list-container {
   max-width: 80%;
-  margin: 5% auto;
-  border: 1px solid blue;
-  padding: 5%;
+  margin: 4% auto;
+  border: 2px solid;
+  padding: 2%;
 }
-.list {
-  width:100%;
-}
-.list ul {
-  list-style-type: none;
-}
-
 /* Form component styles */
 form {
   margin-top: 5%;

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import '../App.css';
 
 function Form({setMembers}) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    role: ''
+    status: ''
   });
 
   const handleChange = (event) => {
@@ -15,8 +16,13 @@ function Form({setMembers}) {
   };
 
   const handleSubmit = (event) => {
-    setMembers(formData);
     event.preventDefault();
+    setMembers(formData);
+    setFormData({ 
+      name: '',
+      email: '',
+      status: ''
+    });
   };
   
   return(
@@ -30,8 +36,8 @@ function Form({setMembers}) {
         <input type='text' name='email' value={formData.email} placeholder='email' onChange={handleChange} />
       </label>
       <label>
-        Role: 
-        <input type='text' name='role' value={formData.role} placeholder='current role' onChange={handleChange} />
+        Status: 
+        <input type='text' name='status' value={formData.status} placeholder='current status' onChange={handleChange} />
       </label>
       <input type='submit' value='Submit' />
     </form>
