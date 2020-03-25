@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
 import './App.css';
 import Form from './components/Form';
+import MembersList from './components/MembersList';
 
 function App() {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState([{name:'Dana Scully', email:'dscully@fbi.com', status:'reserved'}]);
 
   return (
     <div className='App'>
       <Form 
         setMembers={setMembers} 
       />
-      <div className='Member-list'>
-        <ul>
-          {
-            console.log(members)
-            // members.map(member => {
-            //   return <li>{member.name}</li>
-            // })
-          }
-        </ul>
-      </div>
+      <MembersList 
+        members={members} 
+      />
     </div>
   );
 }
